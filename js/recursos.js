@@ -2,7 +2,7 @@
   var contenedor = document.getElementById('lista-recursos');
   if (!contenedor || !window.RECURSOS) return;
 
-  var ETIQUETAS = { pdf: 'Documento', video: 'Vídeo', podcast: 'Podcast' };
+  var ETIQUETAS = { pdf: 'Documento', video: 'Vídeo' };
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -42,19 +42,6 @@
       frame.allowFullscreen = true;
       card.appendChild(frame);
       if (r.watch) links.appendChild(enlace('Abrir en otra pestaña', r.watch, 'primary'));
-    } else if (r.tipo === 'podcast') {
-      var audio = document.createElement('audio');
-      audio.controls = true;
-      audio.preload = 'none';
-      audio.src = r.url;
-      // Plan B automático: si el audio falla, se cambia a la copia
-      audio.addEventListener('error', function () {
-        if (r.planB && audio.src.indexOf(r.planB) === -1) {
-          audio.src = r.planB;
-          audio.load();
-        }
-      });
-      card.appendChild(audio);
     } else {
       links.appendChild(enlace('Abrir', r.url, 'primary'));
     }

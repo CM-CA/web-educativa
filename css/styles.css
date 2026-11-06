@@ -100,7 +100,6 @@ code { background: var(--surface); border: 1px solid var(--border); padding: 1px
 .resource iframe {
   width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 10px; background: #000;
 }
-.resource audio { width: 100%; }
 .resource .notice { font-size: .85rem; color: var(--muted); margin: 0; }
 .resource.video { grid-column: span 2; }
 @media (max-width: 560px) { .resource.video { grid-column: span 1; } }
