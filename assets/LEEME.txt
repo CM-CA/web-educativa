@@ -1,0 +1,2 @@
+Guarda aquí las copias propias de PDF y audios (Plan B), por ejemplo tema1.pdf o episodio1.mp3.
+Después referéncialas en js/recursos-data.js como "assets/tema1.pdf".

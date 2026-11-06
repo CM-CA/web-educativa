@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aula Abierta · Foro</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Aula Abierta</a>
+    <nav aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="foro.html" aria-current="page">Foro</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <h1>Foro de dudas</h1>
+      <p class="lead">
+        Escribe aquí tus preguntas. Para participar necesitas una cuenta gratuita de GitHub.
+        Antes de preguntar, echa un vistazo por si ya está resuelta.
+      </p>
+    </section>
+
+    <section class="rules">
+      <h2>Normas básicas</h2>
+      <ul>
+        <li>Respeto siempre: aquí venimos a aprender.</li>
+        <li>Una pregunta por mensaje y con un título claro.</li>
+        <li>Si respondes, explica el porqué, no solo el resultado.</li>
+      </ul>
+    </section>
+
+    <section id="comentarios" class="forum">
+      <!--
+        Giscus se configura en https://giscus.app/es:
+        1) Activa Discussions en el repositorio (Settings → Features → Discussions).
+        2) Instala la app https://github.com/apps/giscus en el repositorio.
+        3) Copia data-repo-id y data-category-id que te da giscus.app y pégalos abajo.
+      -->
+      <script src="https://giscus.app/client.js"
+        data-repo="CM-CA/web-educativa"
+        data-repo-id="REEMPLAZAR_REPO_ID"
+        data-category="Q&A"
+        data-category-id="REEMPLAZAR_CATEGORY_ID"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="es"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </section>
+
+    <p class="planb">
+      ¿No carga el foro? Puedes escribir directamente en
+      <a href="https://github.com/CM-CA/web-educativa/discussions" target="_blank" rel="noopener">las discusiones del repositorio</a>.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Aula Abierta · Contenido educativo</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

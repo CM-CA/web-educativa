@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aula Abierta · Recursos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Aula Abierta</a>
+    <nav aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="recursos.html" aria-current="page">Recursos</a>
+      <a href="foro.html">Foro</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <h1>Recursos didácticos</h1>
+      <p class="lead">Materiales organizados por tipo. Si un enlace no funciona, usa el botón «Plan B».</p>
+    </section>
+
+    <div class="filters" role="group" aria-label="Filtrar por tipo">
+      <button class="chip active" data-filter="todos">Todos</button>
+      <button class="chip" data-filter="pdf">Documentos</button>
+      <button class="chip" data-filter="video">Vídeos</button>
+      <button class="chip" data-filter="podcast">Podcast</button>
+    </div>
+
+    <section id="lista-recursos" class="resource-grid" aria-live="polite"></section>
+    <noscript><p>Activa JavaScript para ver la lista de recursos.</p></noscript>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Aula Abierta · Contenido educativo</p>
+  </footer>
+  <script src="js/recursos-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/recursos.js"></script>
+</body>
+</html>
